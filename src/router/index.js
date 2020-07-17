@@ -1,30 +1,33 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Poodle from "../views/Poodle.vue";
+import Finder from "../views/Finder.vue";
+import Quem from "../views/Quem.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "poodle",
+    component: Poodle,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+    path: "/finder",
+    name: "finder",
+    component: Finder,
+  },
+  {
+    path: "/quem",
+    name: "quem",
+    component: Quem,
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;
