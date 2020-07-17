@@ -9,19 +9,9 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "poodle",
-    component: Poodle,
-  },
-  {
-    path: "/finder",
     name: "finder",
     component: Finder,
-  },
-  {
-    path: "/quem",
-    name: "quem",
-    component: Quem,
-  },
+  }
 ];
 
 const router = new VueRouter({
